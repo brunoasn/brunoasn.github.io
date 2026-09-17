@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-color: #ffffff;
+  background-color: #fff;
   text-align: center;
   padding-top: 20px;
 }
@@ -39,7 +39,7 @@ main {
 }
 
 section {
-  background-color: #ffffff;
+  background-color: #fff;
   margin: 20px;
   padding: 20px;
 }
@@ -57,7 +57,7 @@ footer {
   gap: 16px;
   margin: 20px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .home-imagens img {

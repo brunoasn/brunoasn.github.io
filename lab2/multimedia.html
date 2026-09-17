@@ -3,18 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Tóquio</title>
+    <style>
+      .fotografias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .fotografias img {
+        width: 150px;
+        border-radius: 20px;
+      }
+      .poema {
+        text-align: center;
+      }
+
+      .poema p:nth-child(even) {
+        color: gray;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Tóquio</h1>
-      <a href="index.html">Home</a>
-      <a href="local.html">Localização</a>
-      <a href="multimedia.html">Multimédia</a>
-      <a href="info.html">Informação</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="local.html">Localização</a>
+        <a href="multimedia.html">Multimédia</a>
+        <a href="info.html">Informação</a>
+      </nav>
     </header>
     <main>
       <h2>Multimédia</h2>
+      <p>Conheça Tóquio através de fotografias, vídeo e poesia.</p>
+
+      <a href="#fotografias">Fotografias</a>
+      <a href="#video">Vídeo</a>
+      <a href="#poema">Poema</a>
+      <section>
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="fotografias">
+          <img src="images/TokyoSkyline.jpg" alt="Vista Cidade" />
+          <img src="images/ShibuyaCrossing.jpg" alt="Shibuya" />
+          <img src="images/MountFuji.jpg" alt="Monte Fuji" />
+          <img src="images/CherryBlossom.jpg" alt="Flores de Cerejeira" />
+          <img src="images/MeijiJinguShrine.jpg" alt="Meiji Jingu Shrine" />
+          <img src="images/sensojitemple.jpg" alt="Templo Sensoji" />
+          <img src="images/TokyoSkyTree.jpg" alt="Tóquio SkyTree" />
+          <img src="images/TokyoTower.jpg" alt="Torre de Tóquio" />
+        </div>
+      </section>
+      <section>
+        <h3 id="videos">Vídeo</h3>
+
+        <iframe
+          width="800"
+          height="450"
+          src="https://www.youtube.com/embed/0nTO4zSEpOs?si=B6RA7_v6O9TW7P5O"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <section>
+        <h3 id="poema">Poesia</h3>
+        <div class="poema">
+          <p>Tóquio desperta entre luzes e caminhos,</p>
+          <p>onde o futuro corre sobre carris.</p>
+
+          <p>Nos templos, o silêncio guarda memórias,</p>
+          <p>e nas ruas, o néon pinta a noite.</p>
+
+          <p>As cerejeiras anunciam a primavera,</p>
+          <p>enquanto a cidade nunca deixa de avançar.</p>
+
+          <p>Entre tradição e tecnologia,</p>
+          <p>cada esquina conta uma história diferente.</p>
+
+          <p>Ao longe, o Monte Fuji observa em silêncio,</p>
+          <p>como se o tempo parasse por um instante.</p>
+
+          <p>Tóquio é movimento, cor e contraste,</p>
+          <p>uma cidade que parece nunca dormir.</p>
+        </div>
+      </section>
       <p>A minha cidade é muito linda!!!</p>
     </main>
     <footer>

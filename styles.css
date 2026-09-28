@@ -96,3 +96,12 @@ section {
     flex-direction: row;
   }
 }
+
+.tutoriais section {
+  height: auto;
+}
+
+.tutoriais iframe {
+  width: 100%;
+  height: 350px;
+}

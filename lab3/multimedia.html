@@ -5,25 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Tóquio</title>
-    <style>
-      .fotografias {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      .fotografias img {
-        width: 150px;
-        border-radius: 20px;
-      }
-      .poema {
-        text-align: center;
-      }
-
-      .poema p:nth-child(even) {
-        color: gray;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -38,13 +19,21 @@
     <main>
       <h2>Multimédia</h2>
       <p>Conheça Tóquio através de fotografias, vídeo e poesia.</p>
+      <div class="submenu">
+        <a href="#fotografias">Fotografias</a>
+        <a href="#video">Vídeo</a>
+        <a href="#poema">Poema</a>
+      </div>
       <section class="emblema">
-        <img src="images/MountFuji.jpg" alt="Monte Fuji" />
-        <p class="frase">Entre tradição e futuro.</p>
+        <img src="images/MonteFujiGrande.jpg" alt="Monte Fuji" />
+        <p class="frase">Entre tradição e futuro</p>
       </section>
-      <a href="#fotografias">Fotografias</a>
-      <a href="#video">Vídeo</a>
-      <a href="#poema">Poema</a>
+      <section class="video-bg">
+        <video autoplay muted loop playsinline>
+          <source src="videos/walking.mp4" type="video/mp4" />
+        </video>
+        <p class="video-texto">Tóquio nunca dorme</p>
+      </section>
       <section>
         <h3 id="fotografias">Fotografias</h3>
         <div class="fotografias">
@@ -58,9 +47,9 @@
           <img src="images/TokyoTower.jpg" alt="Torre de Tóquio" />
         </div>
       </section>
+      <section class="paralax"></section>
       <section>
-        <h3 id="videos">Vídeo</h3>
-
+        <h3 id="video">Vídeo</h3>
         <iframe
           width="800"
           height="450"
@@ -101,7 +90,6 @@
           <p>uma cidade que parece nunca dormir.</p>
         </div>
       </section>
-      <p>A minha cidade é muito linda!!!</p>
     </main>
     <footer>
       <p>DIW 2026</p>

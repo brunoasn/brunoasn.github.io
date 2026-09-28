@@ -1,3 +1,7 @@
+/* =========================
+   Base
+   ========================= */
+
 body {
   background-color: #f5f5f7;
   color: #1d1d1f;
@@ -6,7 +10,36 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-size: 19px;
+  line-height: 1.6;
 }
+
+main {
+  background-color: #f5f5f7;
+  padding: 20px;
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+}
+
+iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+/* =========================
+   Header e menu das cidades
+   ========================= */
 
 header {
   background-color: #fff;
@@ -38,20 +71,9 @@ nav a {
   padding: 8px;
 }
 
-main {
-  background-color: #f5f5f7;
-  padding: 20px;
-  flex: 1;
-  max-width: 1200px;
-  width: 100%;
-  margin: auto;
-}
-
-section {
-  background-color: #fff;
-  margin: 20px;
-  padding: 20px;
-}
+/* =========================
+   Footer
+   ========================= */
 
 footer {
   background-color: #2c2c2e;
@@ -60,27 +82,68 @@ footer {
   padding: 12px;
 }
 
+/* =========================
+   Página Home
+   ========================= */
+
+.home-hero {
+  position: relative;
+  height: 60vh;
+  padding: 0;
+  border-radius: 18px;
+  background-image: url("imagesHome/tokyowalking.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.home-hero-texto {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  border-radius: 18px;
+}
+
+.home-hero-texto h2 {
+  margin: 0;
+  font-size: 3vw;
+}
+
+.home-hero-texto p {
+  margin: 8px 0 0;
+  font-size: 1.3rem;
+}
+
 .home-imagens {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
-  margin: 20px;
-  padding: 20px;
-  background-color: #fff;
+  gap: 20px;
+}
+
+.home-imagens figure {
+  width: 100%;
+  margin: 0;
+  text-align: center;
 }
 
 .home-imagens img {
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  height: 250px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-iframe {
-  max-width: 100%;
-  border: 0;
+.home-imagens figcaption {
+  padding-top: 8px;
+  color: #6e6e73;
 }
+
+/* =========================
+   Página Localização
+   ========================= */
 
 .local {
   display: flex;
@@ -88,7 +151,73 @@ iframe {
   gap: 20px;
 }
 
-/* Multimédia */
+/* =========================
+   Página Multimédia
+   ========================= */
+
+/* Submenu interno */
+
+.submenu {
+  display: flex;
+  gap: 20px;
+}
+
+.submenu a {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+/* Foto emblemática com frase (position) */
+
+.emblema {
+  position: relative;
+  padding: 0;
+}
+
+.emblema img {
+  width: 100%;
+}
+
+.frase {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  margin: 0;
+  color: white;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+/* Vídeo background */
+
+.video-bg {
+  position: relative;
+  height: 60vh;
+  padding: 0;
+  overflow: hidden;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-texto {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 2vw;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+/* Galeria de fotografias (transition) */
 
 .fotografias {
   display: flex;
@@ -108,6 +237,18 @@ iframe {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Efeito paralax */
+
+.paralax {
+  height: 60vh;
+  background-image: url("images/TokyoTowerGrande.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Poema */
+
 .poema {
   text-align: center;
 }
@@ -116,26 +257,9 @@ iframe {
   color: gray;
 }
 
-.emblema {
-  position: relative;
-  padding: 0;
-}
-
-.emblema img {
-  width: 100%;
-}
-
-.frase {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  margin: 0;
-  color: white;
-  font-size: 4vw;
-  font-weight: bold;
-}
-
-/* Informações */
+/* =========================
+   Página Informações (grid)
+   ========================= */
 
 .info-grid {
   display: grid;
@@ -154,7 +278,12 @@ iframe {
   border-radius: 12px;
 }
 
+/* =========================
+   Responsividade (PC)
+   ========================= */
+
 @media (width >= 600px) {
+  /* Menu: pílula horizontal */
   header {
     flex-direction: row;
     justify-content: center;
@@ -170,18 +299,30 @@ iframe {
     padding: 12px 24px;
   }
 
+  /* Localização: texto ao lado do mapa */
   .local {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
-  .local p,
+  .local p {
+    width: 45%;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 18px;
+  }
+
   .local iframe {
-    width: 50%;
+    width: 55%;
+    height: 450px;
+    border-radius: 18px;
   }
 
+  /* Informações: grelha com áreas */
   .info-grid {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 450px auto;
     grid-template-areas:
       "tabela tabela img1"
       "img2 . curiosidades";
@@ -203,11 +344,7 @@ iframe {
     grid-area: curiosidades;
   }
 
-  .info-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px auto;
-    grid-template-areas:
-      "tabela tabela img1"
-      "img2 . curiosidades";
+  .home-imagens figure {
+    width: 45%;
   }
 }

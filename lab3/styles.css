@@ -7,11 +7,11 @@ body {
   color: #1d1d1f;
   margin: 0;
   font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: 19px;
-  line-height: 1.6;
 }
 
 main {
@@ -91,7 +91,7 @@ footer {
   height: 60vh;
   padding: 0;
   border-radius: 18px;
-  background-image: url("imagesHome/tokyowalking.jpg");
+  background-image: url("imagesHero/tokyowalking.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -101,7 +101,7 @@ footer {
   top: 8%;
   left: 5%;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0 0 0 / 50%);
   padding: 20px 30px;
   border-radius: 18px;
 }
@@ -152,6 +152,27 @@ footer {
 }
 
 /* =========================
+   Página Informações (grid)
+   ========================= */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.info-grid section {
+  margin: 0;
+}
+
+.info-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =========================
    Página Multimédia
    ========================= */
 
@@ -184,7 +205,7 @@ footer {
   left: 5%;
   margin: 0;
   color: white;
-  font-size: 2vw;
+  font-size: 1vw;
   font-weight: bold;
 }
 
@@ -205,23 +226,22 @@ footer {
 
 .video-texto {
   position: absolute;
-  top: 5%;
+  top: 8%;
   left: 0;
   right: 0;
   margin: 0;
+  padding: 20px;
   text-align: center;
   color: white;
-  font-size: 2vw;
+  background-color: rgb(0 0 0 / 50%);
+  font-size: 1vw;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
 }
 
 /* Galeria de fotografias (transition) */
 
 .fotografias {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -234,7 +254,7 @@ footer {
 
 .fotografias img:hover {
   opacity: 0.6;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 20%);
 }
 
 /* Efeito paralax */
@@ -258,27 +278,6 @@ footer {
 }
 
 /* =========================
-   Página Informações (grid)
-   ========================= */
-
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.info-grid section {
-  margin: 0;
-}
-
-.info-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* =========================
    Responsividade (PC)
    ========================= */
 
@@ -297,6 +296,11 @@ footer {
     width: auto;
     border-radius: 30px;
     padding: 12px 24px;
+  }
+
+  /* Home: 2 imagens em cima, 1 em baixo */
+  .home-imagens figure {
+    width: 45%;
   }
 
   /* Localização: texto ao lado do mapa */
@@ -321,11 +325,10 @@ footer {
 
   /* Informações: grelha com áreas */
   .info-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px auto;
-    grid-template-areas:
-      "tabela tabela img1"
-      "img2 . curiosidades";
+    grid-template:
+      "tabela tabela img1" 450px
+      "img2 . curiosidades" auto
+      / 1fr 1fr 1fr;
   }
 
   .g-tabela {
@@ -342,9 +345,5 @@ footer {
 
   .g-curiosidades {
     grid-area: curiosidades;
-  }
-
-  .home-imagens figure {
-    width: 45%;
   }
 }

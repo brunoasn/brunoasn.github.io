@@ -1,19 +1,19 @@
 let counter = 0;
-const numero = document.querySelector('#numero');
+const numero = document.querySelector("#numero");
 
 function count() {
   counter++;
   numero.textContent = counter;
 }
 
-const titulo = document.querySelector('#titulo');
+const titulo = document.querySelector("#titulo");
 
-function mudarTitulo(){
-    titulo.textContent = "東京";
-    titulo.style.color = "red";
+function mudarTitulo() {
+  titulo.textContent = "東京";
+  titulo.style.color = "red";
 }
 
-const texto = document.querySelector('#texto');
+const texto = document.querySelector("#texto");
 
 function entrarFoto() {
   texto.textContent = "Tóquio à Noite";
@@ -25,7 +25,7 @@ function sairFoto() {
   texto.style.color = "black";
 }
 
-const rodape = document.querySelector('#rodape');
+const rodape = document.querySelector("#rodape");
 
 function mexerRato() {
   rodape.textContent = "Estás a mexer o rato 🐭";

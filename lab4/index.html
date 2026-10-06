@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Lab 4</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="titulo" ondblclick="mudarTitulo()">Tóquio</h1>
+    </header>
+
+    <main>
+      <p id="texto">Onde a tradição milenar encontra o futuro.</p>
+
+      <img
+        id="foto"
+        src="images/citynight.jpg"
+        alt="Tóquio vista do alto à noite"
+        onmouseover="entrarFoto()"
+        onmouseout="sairFoto()"
+      />
+
+      <p id="numero">0</p>
+      <button id="btn-contar" onclick="count()">Conta</button>
+    </main>
+
+    <footer>
+      <p id="rodape" onmousemove="mexerRato()">DIW 2026</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

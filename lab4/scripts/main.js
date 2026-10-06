@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 let counter = 0;
 const numero = document.querySelector("#numero");
 

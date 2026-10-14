@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5 - Eventos</title>
+  </head>
+  <body>
+    <header>
+      <h1>Eventos 1.0</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2 id="passa" onmouseover="passar()" onmouseout="sair()">
+          1. Passa por aqui!
+        </h2>
+      </section>
+
+      <section>
+        <h2 id="pinta">2. Pinta-me!</h2>
+        <button onclick="pintarVermelho()">Red</button>
+        <button onclick="pintarVerde()">Green</button>
+        <button onclick="pintarAzul()">Blue</button>
+      </section>
+
+      <section>
+        <label>3. Experimenta escrever...</label>
+        <input id="escrever" type="text" onkeyup="mudarCorCaixa()" />
+      </section>
+
+      <section>
+        <label>4. Escolha uma cor em inglês:</label>
+        <input id="cor" type="text" />
+        <button onclick="mudarFundo()">submeter</button>
+      </section>
+
+      <section>
+        <label>5.</label>
+        <button onclick="contar()">Conta!</button>
+        <span id="numero">0</span>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

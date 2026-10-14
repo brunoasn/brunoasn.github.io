@@ -3,42 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Lab 5 - Eventos</title>
   </head>
   <body>
     <header>
-      <h1>Eventos 1.0</h1>
+      <h1>Eventos 2.0</h1>
     </header>
 
     <main>
       <section>
-        <h2 id="passa" onmouseover="passar()" onmouseout="sair()">
-          1. Passa por aqui!
-        </h2>
+        <h2 id="passa">1. Passa por aqui!</h2>
       </section>
 
       <section>
         <h2 id="pinta">2. Pinta-me!</h2>
-        <button onclick="pintarVermelho()">Red</button>
-        <button onclick="pintarVerde()">Green</button>
-        <button onclick="pintarAzul()">Blue</button>
+        <button class="color" data-color="red">Red</button>
+        <button class="color" data-color="green">Green</button>
+        <button class="color" data-color="blue">Blue</button>
       </section>
 
       <section>
         <label>3. Experimenta escrever...</label>
-        <input id="escrever" type="text" onkeyup="mudarCorCaixa()" />
+        <input id="escrever" type="text" />
       </section>
 
       <section>
-        <label>4. Escolha uma cor em inglês:</label>
-        <input id="cor" type="text" />
-        <button onclick="mudarFundo()">submeter</button>
+        <label>4. Escolhe a cor da página:</label>
+        <select id="fundo">
+          <option value="white">White</option>
+          <option value="lavender">Lavender</option>
+          <option value="lightpink">Lightpink</option>
+          <option value="lightgreen">Lightgreen</option>
+        </select>
       </section>
 
       <section>
-        <label>5.</label>
-        <button onclick="contar()">Conta!</button>
-        <span id="numero">0</span>
+        <h2>5. Contador</h2>
+        <p id="valor">0</p>
+        <button id="mais">Incrementar</button>
+        <button id="menos">Decrementar</button>
+        <button id="reset">Reset</button>
+      </section>
+
+      <section>
+        <h2>6. Select flex</h2>
+        <select id="direcao">
+          <option value="row">row</option>
+          <option value="row-reverse">row-reverse</option>
+          <option value="column">column</option>
+          <option value="column-reverse">column-reverse</option>
+        </select>
+        <div id="bolas">
+          <div class="bola"></div>
+          <div class="bola"></div>
+          <div class="bola"></div>
+          <div class="bola"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>7. Saudação</h2>
+        <form id="saudacao">
+          <input id="nome" type="text" placeholder="insira o seu nome" />
+          <input id="idade" type="number" placeholder="insira a sua idade" />
+          <input type="submit" value="Submit" />
+        </form>
+        <p id="mensagem"></p>
+      </section>
+
+      <section>
+        <h2>8. Temporizador</h2>
+        <p>Segundos: <span id="segundos">0</span></p>
       </section>
     </main>
 

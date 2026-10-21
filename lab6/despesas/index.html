@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1>Registo de Despesas</h1>
-      <button id="btn-darkmode">Dark mode</button>
+      <button type="button" id="btn-darkmode">Dark mode</button>
     </header>
 
     <main>
@@ -28,7 +28,7 @@
             required
           />
           <select id="categoria"></select>
-          <input type="submit" value="Adicionar" />
+          <button type="submit">Adicionar</button>
         </form>
       </section>
 
@@ -44,11 +44,11 @@
           >Data:
           <input type="date" id="filtro-data" />
         </label>
-        <button id="limpar-filtros">Limpar filtros</button>
+        <button type="button" id="limpar-filtros">Limpar filtros</button>
 
         <ul id="lista"></ul>
         <h3>Total: <span id="total">0</span> €</h3>
-        <button id="apagar-todas">Apagar todas</button>
+        <button type="button" id="apagar-todas">Apagar todas</button>
       </section>
     </main>
 

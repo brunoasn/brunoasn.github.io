@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Despesas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Registo de Despesas</h1>
+      <button id="btn-darkmode">Dark mode</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>Nova despesa</h2>
+        <form>
+          <input type="date" id="data" required />
+          <input type="text" id="descricao" placeholder="Descrição" required />
+          <input
+            type="number"
+            id="preco"
+            placeholder="Preço"
+            step="0.01"
+            min="0"
+            required
+          />
+          <select id="categoria"></select>
+          <input type="submit" value="Adicionar" />
+        </form>
+      </section>
+
+      <section>
+        <h2>Despesas</h2>
+        <label
+          >Categoria:
+          <select id="filtro-categoria">
+            <option value="">Todas</option>
+          </select>
+        </label>
+        <label
+          >Data:
+          <input type="date" id="filtro-data" />
+        </label>
+        <button id="limpar-filtros">Limpar filtros</button>
+
+        <ul id="lista"></ul>
+        <h3>Total: <span id="total">0</span> €</h3>
+        <button id="apagar-todas">Apagar todas</button>
+      </section>
+    </main>
+
+    <footer>2026, ULusófona</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

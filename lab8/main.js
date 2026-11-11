@@ -151,8 +151,8 @@ function criaProdutoCesto(produto, i) {
   botao.textContent = "Remover";
   botao.addEventListener("click", () => removerDoCesto(i));
 
-  article.append(titulo);
   article.append(imagem);
+  article.append(titulo);
   article.append(preco);
   article.append(botao);
   return article;

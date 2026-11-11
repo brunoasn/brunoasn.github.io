@@ -94,6 +94,31 @@ input[type="text"] {
   margin-top: 15px;
 }
 
+#lista-cesto article {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  column-gap: 12px;
+  align-items: center;
+  row-gap: 6px;
+}
+
 #lista-cesto article img {
   width: 60px;
+  grid-row: span 3;
+}
+
+#lista-cesto article button {
+  justify-self: start;
+  background: none;
+  color: #6ea8fe;
+  padding: 0;
+}
+
+#lista-cesto article h3,
+#lista-cesto article p {
+  margin: 0;
+}
+
+#lista-cesto article h3 {
+  font-size: 1rem;
 }

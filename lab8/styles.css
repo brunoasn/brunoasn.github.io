@@ -52,10 +52,6 @@ article img {
   border-radius: 6px;
 }
 
-#lista-cesto article {
-  width: 100%;
-}
-
 button {
   background-color: #2563eb;
   color: white;
@@ -94,12 +90,28 @@ input[type="text"] {
   margin-top: 15px;
 }
 
+/* cartões dos produtos */
+#lista-produtos article {
+  display: flex;
+  flex-direction: column;
+}
+
+#lista-produtos article h3 {
+  min-height: 2.4em;
+}
+
+#lista-produtos article button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* cartões do cesto */
 #lista-cesto article {
   display: grid;
   grid-template-columns: 60px 1fr;
-  column-gap: 12px;
+  gap: 6px 12px;
   align-items: center;
-  row-gap: 6px;
+  width: 100%;
 }
 
 #lista-cesto article img {

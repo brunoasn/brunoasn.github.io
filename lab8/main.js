@@ -86,7 +86,7 @@ function criarProduto(produto) {
   titulo.textContent = produto.title;
 
   const imagem = document.createElement("img");
-  imagem.setAttribute("src", produto.image);
+  imagem.setAttribute("src", `${URL_API}${produto.image}`);
   imagem.setAttribute("alt", produto.title);
 
   const descricao = document.createElement("p");
@@ -140,6 +140,9 @@ function criaProdutoCesto(produto, i) {
 
   const titulo = document.createElement("h3");
   titulo.textContent = produto.title;
+  const imagem = document.createElement("img");
+  imagem.setAttribute("src", `${URL_API}${produto.image}`);
+  imagem.setAttribute("alt", produto.title);
 
   const preco = document.createElement("p");
   preco.textContent = `${Number(produto.price).toFixed(2)} €`;
@@ -149,6 +152,7 @@ function criaProdutoCesto(produto, i) {
   botao.addEventListener("click", () => removerDoCesto(i));
 
   article.append(titulo);
+  article.append(imagem);
   article.append(preco);
   article.append(botao);
   return article;

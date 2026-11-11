@@ -93,3 +93,7 @@ input[type="text"] {
 #resultado-compra {
   margin-top: 15px;
 }
+
+#lista-cesto article img {
+  width: 60px;
+}
